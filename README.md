@@ -11,18 +11,17 @@ This README explains the structure of My Bootstrap 4 website. It has 4 sections:
 ### Carousel
 
 - Displays rotating images or content.
-- Image: `cursoul.png`
 - ![Carousel Image](cursoul.png)
 
 ### Services
 
 - Highlights services or features.
-- ![Services Image](service.png)
+- ![Services Image](Service.png)
 
 ### Our Team
 
 - Introduces team members or contributors.
-- ![Our Team Image](Our_team.png)
+- ![Our Team Image](Ourteam.png)
 
 ### Footer
 
