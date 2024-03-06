@@ -5,36 +5,41 @@ This README explains the structure of My Bootstrap 4 website. It has 4 sections:
 ## Sections
 
 ### Navbar
+
 - Shows navigation links.
-- Image: `navbar.jpg`
+- Image: `navbar.png`
 
 ### Carousel
+
 - Displays rotating images or content.
-- Image: `carousel.jpg`
+- Image: `cursoul.png`
 
 ### Services
-- Highlights your services or features.
-- Image: `services.jpg`
+
+- Highlights services or features.
+- Image: `service.png`
 
 ### Our Team
-- Introduces your team members or contributors.
-- Image: `our_team.jpg`
+
+- Introduces team members or contributors.
+- Image: `Ourteam.png`
 
 ### Footer
+
 - Contains contact info and social media links.
-- Image: `footer.jpg`
+- Image: `footer.png`
 
 ## How to Use
 
 1. Clone this repo.
-3. Customize content in `index.html`.
-4. Adjust styles in `css/style.css`.
-5. Test locally before deployment.
+2. Customize content in `index.html`.
+3. Adjust styles in `style.css`.
+4. Test locally before deployment.
 
 ## Deployment
+
 - Deploy to your hosting service once ready.
 
 ## Credits
+
 - Built with Bootstrap 4.
-
-
