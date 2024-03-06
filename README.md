@@ -7,8 +7,7 @@ This README explains the structure of My Bootstrap 4 website. It has 4 sections:
 ### Navbar
 
 - Shows navigation links.
-- Image: `navbar.png`
-
+- ![Navbar Image](navbar.png)
 ### Carousel
 
 - Displays rotating images or content.
