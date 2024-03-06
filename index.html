@@ -14,127 +14,380 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
     />
+
+    <style>
+      ::-webkit-scrollbar {
+        width: 12px;
+      }
+
+      ::-webkit-scrollbar-track {
+        -webkit-box-shadow: inset 0 0 6px rgb(125, 29, 29);
+        border-radius: 10px;
+      }
+
+      ::-webkit-scrollbar-thumb {
+        border-radius: 10px;
+        background-color: #6b2323;
+        -webkit-box-shadow: inset 0 0 6px rgba(34, 24, 24, 0.7);
+      }
+
+      body {
+        font-family: "Poppins", sans-serif;
+        overflow: auto;
+        padding: 0%;
+        margin: 0%;
+      }
+
+      .carousel-inner img {
+        width: 100%;
+        height: 100%;
+      }
+
+      .carousel-item img {
+        max-height: 100%;
+        max-width: 100%;
+        margin: auto;
+        display: block;
+      }
+
+      @media only screen and (min-width: 768px) and (max-width: 1080px) {
+        .card {
+          display: flex;
+          flex-direction: row;
+        }
+      }
+
+      .user-pic {
+        width: 150px;
+        height: 150px;
+        overflow: hidden;
+        border-radius: 100%;
+        margin: 20px auto 20px;
+        border-left: 3px solid #ddd;
+        border-right: 3px solid #ddd;
+        border-top: 3px solid #007bff;
+        border-bottom: 3px solid #007bff;
+        transform: rotate(-30deg);
+        transition: 0.5s;
+      }
+      .card-box:hover .user-pic {
+        transform: rotate(0deg);
+        transform: scale(1.1);
+      }
+      .card-box {
+        padding: 15px;
+        background-color: #fdfdfd;
+        margin: 20px 0px;
+        border-radius: 10px;
+        border: 1px solid #eee;
+        box-shadow: 0px 0px 8px 0px #d4d4d4;
+        transition: 0.5s;
+      }
+      .card-box:hover {
+        border: 1px solid #007bff;
+      }
+      .card-box p {
+        color: #808080;
+      }
+      footer {
+        background-color: rgba(44, 62, 80, 1);
+
+        width: 100%;
+        bottom: 0;
+        font-weight: lighter;
+        color: white;
+      }
+      .footerHeader {
+        width: 100%;
+        padding: 1em;
+        background-color: rgba(52, 73, 94, 1);
+        text-align: center;
+        color: white;
+      }
+      footer h3 {
+        font-weight: lighter;
+      }
+      footer ul {
+        padding-left: 5px;
+        list-style: none;
+      }
+      footer p {
+        text-align: justify;
+        font-size: 12px;
+      }
+      footer iframe {
+        width: 100%;
+        position: relative;
+        height: 170px;
+      }
+      .sm {
+        list-style: none;
+        overflow: auto;
+      }
+      .sm li {
+        display: inline;
+        padding: 5px;
+        float: left;
+      }
+      .sm li a img {
+        width: 32px;
+      }
+      @media only screen and (min-width: 0px) and (max-width: 767px) {
+        .foooter {
+          display: flex;
+          flex-direction: column-reverse;
+          align-items: center;
+        }
+      }
+    </style>
   </head>
+
   <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-      <a class="navbar-brand" href="#">
-        <img
-          src="IMAGE1.jpg"
-          width="40"
-          height="40"
-          class="rounded-pill"
-          alt=""
-        />
-        <text> KaRrOuMDev</text>
-        <!-- Replace with user's name -->
-      </a>
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-toggle="collapse"
-        data-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
-        <span class="navbar-toggler-icon"></span>
-      </button>
+    <section>
+      <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <a class="navbar-brand" href="#">KaRrOuMDev</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
 
-      <div
-        class="collapse navbar-collapse justify-content-center"
-        id="navbarSupportedContent"
-      >
-        <ul class="my-2 navbar-nav">
-          <li class="nav-item j active">
-            <a class="nav-link" href="#">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Services</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">The Team</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Contact</a>
-          </li>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#"
+                >Home <span class="sr-only">(current)</span></a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Our Team</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#Services">Service</a>
+            </li>
+          </ul>
+          <form class="form-inline my-2 my-lg-0">
+            <input
+              class="form-control mr-sm-2"
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+            />
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">
+              Search
+            </button>
+          </form>
+        </div>
+      </nav>
+    </section>
+
+    <section>
+      <div id="demo" class="carousel slide" data-ride="carousel">
+        <!-- Indicators -->
+        <ul class="carousel-indicators">
+          <li data-target="#demo" data-slide-to="0" class="active"></li>
+          <li data-target="#demo" data-slide-to="1"></li>
+          <li data-target="#demo" data-slide-to="2"></li>
         </ul>
-      </div>
 
-      <div
-        class="collapse navbar-collapse justify-content-end"
-        id="navbarSupportedContent"
-      >
-        <form class="form-inline my-2 my-lg-0">
-          <input
-            class="form-control mr-sm-2"
-            type="search"
-            placeholder="Search"
-            aria-label="Search"
-          />
-          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">
-            <i class="fas fa-search"></i>
-          </button>
-        </form>
-      </div>
-    </nav>
-    <!-- cursoul -->
-    <div
-      id="carouselExampleIndicators"
-      class="carousel slide"
-      data-bs-ride="carousel"
-    >
-      <div class="carousel-indicators">
-        <button
-          type="button"
-          data-bs-target="#carouselExampleIndicators"
-          data-bs-slide-to="0"
-          class="active"
-          aria-current="true"
-          aria-label="Slide 1"
-        ></button>
-        <button
-          type="button"
-          data-bs-target="#carouselExampleIndicators"
-          data-bs-slide-to="1"
-          aria-label="Slide 2"
-        ></button>
-        <button
-          type="button"
-          data-bs-target="#carouselExampleIndicators"
-          data-bs-slide-to="2"
-          aria-label="Slide 3"
-        ></button>
-      </div>
-      <div class="carousel-inner">
-        <div class="carousel-item active">
-          <img src="..." class="d-block w-100" alt="..." />
+        <!-- The slideshow -->
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img
+              class="d-block"
+              src="https://picsum.photos/600/300?random=1"
+              alt="Los Angeles"
+            />
+          </div>
+          <div class="carousel-item">
+            <img
+              class="d-block"
+              src="https://picsum.photos/600/300?random=2"
+              alt="Chicago"
+            />
+          </div>
+          <div class="carousel-item">
+            <img
+              class="d-block"
+              src="https://picsum.photos/600/300?random=3"
+              alt="New York"
+            />
+          </div>
         </div>
-        <div class="carousel-item">
-          <img src="..." class="d-block w-100" alt="..." />
+
+        <!-- Left and right controls -->
+        <a class="carousel-control-prev" href="#demo" data-slide="prev">
+          <span class="carousel-control-prev-icon"></span>
+        </a>
+        <a class="carousel-control-next" href="#demo" data-slide="next">
+          <span class="carousel-control-next-icon"></span>
+        </a>
+      </div>
+    </section>
+
+    <section id="Services">
+      <div class="container pt-4">
+        <div class="row" id="cardContainer">
+          <!-- Cards will be inserted here -->
         </div>
-        <div class="carousel-item">
-          <img src="..." class="d-block w-100" alt="..." />
+        <div class="text-center mt-4">
+          <button id="showMoreBtn" class="btn btn-primary">Show More</button>
         </div>
       </div>
-      <button
-        class="carousel-control-prev"
-        type="button"
-        data-bs-target="#carouselExampleIndicators"
-        data-bs-slide="prev"
-      >
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-      </button>
-      <button
-        class="carousel-control-next"
-        type="button"
-        data-bs-target="#carouselExampleIndicators"
-        data-bs-slide="next"
-      >
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-      </button>
-    </div>
+    </section>
+
+    <section class="bg-light py-3 py-md-5 py-xl-8">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-6 offset-sm-3 mt-4 mb-4">
+            <h2 class="text-center">Our Expert Team</h2>
+            <p class="text-center">
+              Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry
+            </p>
+          </div>
+        </div>
+
+        <div class="row" id="teamContainer">
+          <!-- Team members' cards will be inserted here -->
+        </div>
+      </div>
+    </section>
+    <footer>
+      <div class="foooter d-flex justify-content-between">
+        <!--info start-->
+        <div class="pl-4 pt-4">
+          <h1 class="">Follow_us</h1>
+          <ul class="list-inline">
+            <li><i class="m-4 fab fa-whatsapp"></i>&nbsp; +212-o6o6o6o6</li>
+            <li>
+              <i class="m-4 fab fa-google"></i>&nbsp; KaRrOuMDev@gmail.com
+            </li>
+            <li><i class="m-4 fab fa-instagram"></i>&nbsp; Houssam_karroum</li>
+          </ul>
+        </div>
+        <!--info End-->
+        <!--maps start-->
+        <div class="pr-5 pt-2 pb-2">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3319.1649227314115!2d-7.363028225568063!3d33.7046811360049!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xda7b6d0db170185%3A0x79759da1a916fc50!2sENSET%20Mohammedia!5e0!3m2!1sen!2sma!4v1709380453851!5m2!1sen!2sma"
+            width="500"
+            height="400"
+            style="border: 0"
+            allowfullscreen
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
+      </div>
+    </footer>
+    <script>
+      const teamContainer = document.getElementById("teamContainer");
+      const teamMembers = [
+        {
+          name: "Rajnish Kumar",
+          role: "Web Designer",
+          description:
+            "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
+          image: "https://randomuser.me/api/portraits/men/1.jpg",
+        },
+        {
+          name: "Satyam Tiwari",
+          role: "Web Developer",
+          description:
+            "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
+          image: "https://randomuser.me/api/portraits/men/2.jpg",
+        },
+        {
+          name: "Salim Malik",
+          role: "Front End Developer",
+          description:
+            "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
+          image: "https://randomuser.me/api/portraits/men/3.jpg",
+        },
+      ];
+
+      teamMembers.forEach((member) => {
+        const card = `
+        <div class="col-md-4">
+          <div class="card-box text-center">
+            <div class="user-pic">
+              <img src="${member.image}" class="img-fluid" alt="User Pic">
+            </div>
+            <h4>${member.name}</h4>
+            <h6>${member.role}</h6>
+            <hr>
+            <p>${member.description}</p>
+            <hr>
+            <a href="#" class="btn btn-primary">Know More</a>
+          </div>
+        </div>
+      `;
+        teamContainer.innerHTML += card;
+      });
+
+      const cardContainer = document.getElementById("cardContainer");
+      const showMoreBtn = document.getElementById("showMoreBtn");
+
+      // Number of cards to initially show on smaller screens
+      const initialCardsToShow = 1;
+
+      // Number of total cards
+      const totalCards = 12;
+
+      // Number of cards to show each time "show more" is clicked
+      const cardsPerClick = 3;
+
+      // Function to render cards
+      function renderCards(startIndex, endIndex) {
+        let cardsHTML = "";
+        for (let i = startIndex; i < endIndex; i++) {
+          const card = `
+        <div class="card gap-4 w-90 h-90 col-lg-4 p-4">
+          <div>
+            <img src="https://picsum.photos/300/200?random=${
+              i + 1
+            }" class="card-img-top w-100 h-100" alt="..." />
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">
+              Some quick example text to build on the card title and make up the bulk of the card's content.
+            </p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+          </div>
+        </div>
+      `;
+          cardsHTML += card;
+        }
+        cardContainer.innerHTML += cardsHTML;
+      }
+
+      // Render initial set of cards
+      renderCards(0, initialCardsToShow);
+
+      // Handle "show more" button click
+      showMoreBtn.addEventListener("click", function () {
+        const currentCardsCount =
+          cardContainer.querySelectorAll(".card").length;
+        const remainingCards = totalCards - currentCardsCount;
+        const nextCardsToShow = Math.min(remainingCards, cardsPerClick);
+        if (nextCardsToShow > 0) {
+          renderCards(currentCardsCount, currentCardsCount + nextCardsToShow);
+        }
+        if (currentCardsCount + nextCardsToShow >= totalCards) {
+          // Hide "show more" button if all cards are shown
+          showMoreBtn.style.display = "none";
+        }
+      });
+    </script>
+
     <!-- Bootstrap JS and dependencies -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
