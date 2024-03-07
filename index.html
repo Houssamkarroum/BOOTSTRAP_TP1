@@ -192,7 +192,7 @@
       teamMembers.forEach((member) => {
         const card = `
         <div class="col-md-4">
-          <div class="card-box text-center">
+          <div class="card-box w-80 h-60 text-center">
             <div class="user-pic">
               <img src="${member.image}" class="img-fluid" alt="User Pic">
             </div>
@@ -212,7 +212,7 @@
       const showMoreBtn = document.getElementById("showMoreBtn");
 
       // Number of cards to initially show on smaller screens
-      const initialCardsToShow = 1;
+      const initialCardsToShow = 3;
 
       // Number of total cards
       const totalCards = 12;
